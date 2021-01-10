@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "first-app"
+    }
+  },
+  "defaultProject": "first-app",
+  "cli": {
+    "analytics": false
+  }
 }
