@@ -1,1 +1,15 @@
-<h3>Hello from server component</h3>
+<label>Server Name</label>
+<input [(ngModel)]="serverName" type="text" class="form-control" (input)="OnUpdateServerName($event)">
+<button [disabled]="!status" class="btn btn-primary mt-3 mb-2" (click)="OnServerCreated()">Add Server</button>
+<!-- <p>{{serverStatus}}</p>
+<p>{{serverName}}</p> -->
+
+<p [ngStyle]="{color: 'red'}" *ngIf="status; else noServer">Again and again</p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>
+<!-- <label>Username</label>
+<input [(ngModel)]="username" type="text" class="form-control">
+<p>{{username}}</p>
+<button [disabled]="username===''" class="btn btn-info mb-3" (click)="ResetUserName()">Add UserName</button> -->
+
