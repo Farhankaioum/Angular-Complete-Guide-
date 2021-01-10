@@ -1,1 +1,9 @@
-<p>test works!</p>
+<button class="btn btn-warning" (click)="onToggleResult()">Display Details</button>
+
+<p *ngIf="result">This is second test</p>
+<div 
+    *ngFor="let c of countArray; let i = index"
+    [ngStyle]="{backgroundColor: getColor()}" 
+    [ngClass]="{'changeColor' : count >= 5}">
+    {{c}}
+</div>
